@@ -1,0 +1,70 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# Just plain old shell command. You could use `make` as well.
+cmd = "cd cmd/elephant && go build -o /tmp/elephant-air ."
+full_bin = "ELEPHANT_DEV=true /tmp/elephant-air"
+pre_cmd = [
+  "mkdir -p /tmp/elephant/providers",
+  "cd internal/providers/files && go build -buildmode=plugin && cp files.so /tmp/elephant/providers/",
+  "cd internal/providers/desktopapplications && go build -buildmode=plugin && cp desktopapplications.so /tmp/elephant/providers/",
+  "cd internal/providers/clipboard && go build -buildmode=plugin && cp clipboard.so /tmp/elephant/providers/",
+  "cd internal/providers/runner && go build -buildmode=plugin && cp runner.so /tmp/elephant/providers/",
+  "cd internal/providers/symbols && go build -buildmode=plugin && cp symbols.so /tmp/elephant/providers/",
+  "cd internal/providers/calc && go build -buildmode=plugin && cp calc.so /tmp/elephant/providers/",
+  "cd internal/providers/providerlist && go build -buildmode=plugin && cp providerlist.so /tmp/elephant/providers/",
+  "cd internal/providers/menus && go build -buildmode=plugin && cp menus.so /tmp/elephant/providers/",
+  "cd internal/providers/websearch && go build -buildmode=plugin && cp websearch.so /tmp/elephant/providers/",
+  "cd internal/providers/archlinuxpkgs && go build -buildmode=plugin && cp archlinuxpkgs.so /tmp/elephant/providers/",
+  "cd internal/providers/todo && go build -buildmode=plugin && cp todo.so /tmp/elephant/providers/",
+  "cd internal/providers/bookmarks && go build -buildmode=plugin && cp bookmarks.so /tmp/elephant/providers/",
+  "cd internal/providers/unicode && go build -buildmode=plugin && cp unicode.so /tmp/elephant/providers/",
+  "cd internal/providers/bluetooth && go build -buildmode=plugin && cp bluetooth.so /tmp/elephant/providers/",
+  "cd internal/providers/windows && go build -buildmode=plugin && cp windows.so /tmp/elephant/providers/",
+  "cd internal/providers/snippets && go build -buildmode=plugin && cp snippets.so /tmp/elephant/providers/",
+  "cd internal/providers/nirisessions && go build -buildmode=plugin && cp nirisessions.so /tmp/elephant/providers/",
+  "cd internal/providers/niriactions && go build -buildmode=plugin && cp niriactions.so /tmp/elephant/providers/",
+  "cd internal/providers/1password && go build -buildmode=plugin && cp 1password.so /tmp/elephant/providers/",
+  "cd internal/providers/bitwarden && go build -buildmode=plugin && cp bitwarden.so /tmp/elephant/providers/",
+]
+# Binary file yields from `cmd`.
+bin = "/tmp/elephant-air"
+# Watch these filename extensions.
+include_ext = ["go"]
+# Ignore these filename extensions or directories.
+exclude_dir = []
+# Watch these directories if you specified.
+include_dir = []
+# Watch these files.
+include_file = []
+# Exclude files.
+exclude_file = []
+# Exclude specific regular expressions.
+exclude_regex = ["_test\\.go"]
+# Exclude unchanged files.
+exclude_unchanged = false
+# Follow symlink for directories
+follow_symlink = true
+# This log file is placed in your tmp_dir.
+log = "air.log"
+# It's not necessary to trigger build each time file changes if it's too frequent.
+delay = 0 # ms
+# Stop running old binary when build errors occur.
+stop_on_error = true
+# Send Interrupt signal before killing process (windows does not support this feature)
+send_interrupt = false
+# Delay after sending Interrupt signal
+kill_delay = 500 # nanosecond
+# Rerun binary or not
+rerun = true
+# Delay after each execution
+rerun_delay = 500
+
+[misc]
+# Delete tmp directory on exit
+clean_on_exit = true
+
+[screen]
+clear_on_rebuild = true
+keep_scroll = true

@@ -1,0 +1,71 @@
+{
+  "categories": [
+    {
+      "title": "## 🚀 Features",
+      "labels": [
+        "feature",
+        "enhancement",
+        "feat",
+        "desktopapplications",
+        "files",
+        "setup",
+        "query",
+        "comm"
+      ]
+    },
+    {
+      "title": "## 🐛 Bug Fixes",
+      "labels": ["bug", "bugfix", "fix"]
+    },
+    {
+      "title": "## 🧰 Maintenance",
+      "labels": ["maintenance", "chore", "deps"]
+    },
+    {
+      "title": "## 📝 Documentation",
+      "labels": ["documentation", "docs", "readme"]
+    },
+    {
+      "title": "## 💥 Breaking Changes",
+      "labels": ["breaking", "breaking-change"]
+    }
+  ],
+  "ignore_labels": ["ignore-for-release"],
+  "sort": {
+    "order": "ASC",
+    "on_property": "mergedAt"
+  },
+  "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+  "pr_template": "- #{{TITLE}} by @#{{AUTHOR}} in ##{{NUMBER}}",
+  "empty_template": "- No changes",
+  "label_extractor": [
+    {
+      "pattern": "(.)\\s*:\\s*(.*)",
+      "target": "$1",
+      "flags": "gu"
+    },
+    {
+      "pattern": "\\[Issue\\]",
+      "target": "bug"
+    }
+  ],
+  "duplicate_filter": {
+    "pattern": "\\[ABC-....\\]",
+    "on_property": "title",
+    "method": "match"
+  },
+  "transformers": [
+    {
+      "pattern": "[\\-\\*] (\\[(...|TEST|CI|SKIP)\\])( )?(.+?)\n(.+?[\\-\\*] )(.+)",
+      "target": "- $4\n  - $6"
+    }
+  ],
+  "max_tags_to_fetch": 200,
+  "max_pull_requests": 1000,
+  "max_back_track_time_days": 365,
+  "exclude_merge_branches": ["Owner/qa"],
+  "tag_resolver": {
+    "method": "semver"
+  },
+  "base_branches": ["main", "master"]
+}
